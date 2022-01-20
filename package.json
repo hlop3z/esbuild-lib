@@ -1,0 +1,19 @@
+{
+  "name": "esbuild-module",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "src/__init__.js",
+  "scripts": {
+    "build": "esbuild src/__init__.js --outfile=dist/tmp.js --bundle --minify --format=esm && echo /* eslint-disable */ > dist/lib.js && cat dist/tmp.js >> dist/lib.js && rm dist/tmp.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.14.11",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}
