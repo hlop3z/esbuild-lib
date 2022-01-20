@@ -7,6 +7,7 @@
   "keywords": [],
   "main": "src/__init__.js",
   "scripts": {
+    "dev": "python watcher.py",
     "build": "esbuild src/__init__.js --outfile=dist/tmp.js --bundle --minify --format=esm && echo /* eslint-disable */ > dist/lib.js && cat dist/tmp.js >> dist/lib.js && rm dist/tmp.js"
   },
   "dependencies": {},
